@@ -1,5 +1,7 @@
 import React, {Component} from "react";
+import {Fragment} from "react";
 import ReactDOM from "react-dom";
+import LoadingData from "./components/loadingData.js";
 
 class App extends Component {
     constructor(props){
@@ -9,12 +11,10 @@ class App extends Component {
         }
     }
 
+    // tutaj timeout
+
     render(){
-        return (
-            <>
-                <h1>Hello World!</h1>
-            </>
-        )
+        return <LoadingData/> // tutaj instrukcja warunkowa
     }
 }
 
