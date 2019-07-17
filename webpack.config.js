@@ -1,7 +1,7 @@
 const path = require("path");
 
-const entryPath = "js/";
-const entryFile = "dev/app.js";
+const entryPath = "dev/";
+const entryFile = "app.js";
 
 module.exports = {
     entry: ['whatwg-fetch', `./${entryPath}/js/${entryFile}`], // ścieżka dostępu złożona z ^ powyższych zmiennych
