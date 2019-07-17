@@ -2,19 +2,29 @@ import React, {Component} from "react";
 import {Fragment} from "react";
 import ReactDOM from "react-dom";
 import LoadingData from "./components/loadingData.js";
+import System from "./components/system.js";
 
 class App extends Component {
     constructor(props){
         super(props);
         this.state={
-
+            isValid: false,
         }
     }
 
-    // tutaj timeout
+    componentDidMount() {
+        this.timeTimeout = setTimeout(() =>
+            this.setState({
+                isValid: true,
+            }), 10000);
+    }
+
+    componentWillUnmount() {
+        clearTimeout(this.timeTimeout);
+    }
 
     render(){
-        return <LoadingData/> // tutaj instrukcja warunkowa
+        return this.state.isValid === true ? <System/> : <LoadingData/>
     }
 }
 

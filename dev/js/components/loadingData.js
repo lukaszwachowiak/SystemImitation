@@ -4,7 +4,7 @@ import dataToLoad from "../data/dataToLoad";
 export default class LoadingData extends Component {
     constructor(props){
         super(props);
-        console.log(dataToLoad);
+        // console.log(dataToLoad);
         this.state={
             cursor: "|",
         }
@@ -16,7 +16,7 @@ export default class LoadingData extends Component {
                 cursor: this.state.cursor === "|" ? this.state.cursor === "" : "|",
             }), 750);
 
-        // tutaj timeout
+        // tutaj timeouty z dataToLoad
     }
 
     componentWillUnmount() {
