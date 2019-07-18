@@ -13,6 +13,6 @@ export default class System extends Component {
     render(){
         return (<>
             <h1>tekst</h1>
-        </>); // instrukcja warunkowa, najpierw logowanie <LogIn/>, potem <Screen/>
+        </>); // instrukcja warunkowa, najpierw logowanie <LogIn/> z , potem <Screen/>
     }
 }

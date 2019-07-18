@@ -16,7 +16,7 @@ class App extends Component {
         this.timeTimeout = setTimeout(() =>
             this.setState({
                 isValid: true,
-            }), 10000);
+            }), 10000); // ustawić odpowiednią ilość sekund
     }
 
     componentWillUnmount() {
