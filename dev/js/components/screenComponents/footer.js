@@ -21,8 +21,8 @@ export default class Footer extends Component {
             <footer>
                 <ul>Start</ul>
                 <div>
-                    {this.state.date.toLocaleTimeString()} <br/>
-                    {this.state.date.toLocaleDateString()}
+                    <p>{this.state.date.toLocaleTimeString()}</p>
+                    <p>{this.state.date.toLocaleDateString()}</p>
                 </div>
             </footer>
         )

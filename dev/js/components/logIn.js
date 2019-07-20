@@ -58,6 +58,7 @@ export default class LogIn extends Component {
                         />
                         <br/>
                         <input type="submit" value="Zaloguj się"/>
+                        {/*^ albo jako <button>Zaloguj się</button>, bo może być łatwiejszy do ostylowania*/}
                     </form>
                     {this.state.error ? <p>Podane hasło jest nieprawidłowe</p> : null}
                 </div>

@@ -28,7 +28,7 @@ class App extends Component {
     render(){
         // return this.state.isValid ? <System/> : <LoadingData/> // do wywalenia
 
-        // return this.state.isValid ? <LogIn password="admin1"/> : <LoadingData/> // wersja ostateczna
+        // return this.state.isValid ? <LogIn password="admin1"/> : <LoadingData/> // WERSJA OSTATECZNA
         return <Screen/> // robocza ścieżka
     }
 }
