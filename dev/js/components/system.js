@@ -1,3 +1,5 @@
+// plik do wywalenia
+
 // import React, {Component} from "react";
 // import LogIn from "./logIn.js";
 //

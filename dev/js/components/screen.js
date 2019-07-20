@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {Fragment} from "react";
+import Footer from "./screenComponents/footer.js";
 
 export default class Screen extends Component {
     constructor(props){
@@ -10,6 +11,10 @@ export default class Screen extends Component {
     }
 
     render(){
-        return <h1>Hello World</h1>
+        return (
+            <div className="container">
+                <Footer/>
+            </div>
+        )
     }
 }
