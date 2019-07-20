@@ -58,29 +58,27 @@ export default class LoadingData extends Component {
         const loa = (
             <div className="container">
                 <Header/>
-                <section className="datas">
-                    <ul>
-                        <li>
-                            {dataToLoad.murica} <br/>
-                            {dataToLoad.lapsus} <br/>
-                            {dataToLoad.cocaine}
-                        </li>
-                        <hr/>
-                        <li>
-                            {dataToLoad.fsharp} <br/>
-                            {dataToLoad.aminor} <br/>
-                            {dataToLoad.memoryRemains} <br/>
-                            {dataToLoad.SB} <br/>
-                            {dataToLoad.sata1} <br/>
-                            {dataToLoad.sata2}
+                <main>
+                    <section>
+                        <article>
+                            <p>{dataToLoad.murica}</p>
+                            <p>{dataToLoad.lapsus}</p>
+                            <p>{dataToLoad.cocaine}</p>
+                            <p>{dataToLoad.fsharp}</p>
+                            <p>{dataToLoad.aminor}</p>
+                            <p>{dataToLoad.memoryRemains}</p>
+                            <p>{dataToLoad.SB}</p>
+                            <p>{dataToLoad.sata1} </p>
+                            <p>{dataToLoad.sata2}
                             {this.state.sataSpan ? <span>{dataToLoad.sata2span}</span> : null}
-                        </li>
-                        <li>{this.state.inspector ? dataToLoad.gadget : null}</li>
-                        <li>{this.state.unholy ? <>{dataToLoad.satan} <br/> {dataToLoad.lucek}</> : null}</li>
-                    </ul>
-                    <div>{this.state.cursor}</div>
-                </section>
-                <footer>Copyright by Łukasz Wachowiak</footer>
+                            </p>
+                            <p>{this.state.inspector ? dataToLoad.gadget : null}</p>
+                            <>{this.state.unholy ? <><p>{dataToLoad.satan}</p> <p>{dataToLoad.lucek}</p></> : null}</>
+                        </article>
+                        <div>{this.state.cursor}</div>
+                    </section>
+                </main>
+                <footer>&copy; Copyright by Łukasz Wachowiak</footer>
             </div>
         );
 

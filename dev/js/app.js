@@ -2,7 +2,8 @@ import React, {Component} from "react";
 import {Fragment} from "react";
 import ReactDOM from "react-dom";
 import LoadingData from "./components/loadingData.js";
-import System from "./components/system.js";
+import LogIn from "./components/logIn.js";
+// import System from "./components/system.js";
 
 class App extends Component {
     constructor(props){
@@ -24,7 +25,8 @@ class App extends Component {
     }
 
     render(){
-        return this.state.isValid === true ? <System/> : <LoadingData/>
+        // return this.state.isValid ? <System/> : <LoadingData/>
+        return this.state.isValid ? <LogIn password="admin1"/> : <LoadingData/>
     }
 }
 
