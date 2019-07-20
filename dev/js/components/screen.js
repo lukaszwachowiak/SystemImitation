@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {Fragment} from "react";
 import Footer from "./screenComponents/footer.js";
-import Folder from "./screenComponents/folder.js";
+import FolderIcon from "./screenComponents/folder.js";
 
 export default class Screen extends Component {
     constructor(props){
@@ -14,7 +14,7 @@ export default class Screen extends Component {
     render(){
         return (
             <div className="container">
-                <Folder/>
+                <FolderIcon/>
                 <Footer/>
             </div>
         )
