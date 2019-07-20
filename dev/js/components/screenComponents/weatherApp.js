@@ -1,15 +1,18 @@
-import React, {Component} from "react";
+import React, {Component, Fragment} from "react";
 
 export default class WeatherApp extends Component {
     constructor(props){
         super(props);
         this.state = {
             weather: false,
+            open: false,
+            close: false,
         };
     }
 
     componentDidMount() {
         fetch(
+            // opcja z wyszukiwarką miasta:
             // `https://api.openweathermap.org/data/2.5/weather?q=${this.state.cityName}&APPID=63331c4f9b8a91f9f17ac1580ef2b545`
             `https://api.openweathermap.org/data/2.5/weather?q=Wroclaw&APPID=63331c4f9b8a91f9f17ac1580ef2b545`
         )
@@ -24,11 +27,53 @@ export default class WeatherApp extends Component {
         });
     }
 
+    open(e){
+        e.preventDefault();
+        this.setState({
+            open: true,
+        })
+    }
+
+    close(e){
+        e.preventDefault();
+        this.setState({
+            close: true,
+            open: false,
+        })
+    }
+
     render(){
-        return this.state.weather ? <div>{this.state.weather.clouds.all}</div> : null;
+        const weatherAppIcon = (
+            <div onDoubleClick={e => this.open(e)}>
+                <div></div>
+                <p>Pogoda</p>
+            </div>
+        );
+
+        const App = (
+            this.state.weather ? (
+                <div>
+                    <div>Tutaj będą informacje o bieżącej pogodzie:
+                        {this.state.weather.clouds.all}
+                    </div>
+                    <footer>
+                    <div onClick={e => this.close(e)}>Zakończ</div>
+                    {/*^ wyłączanie folderu, krzyżyk, obrócić go z pomocą transform: rotate(45deg)*/}
+                    </footer>
+                </div>) : null
+        );
+
+        return (
+            <Fragment>
+                {weatherAppIcon}
+                {this.state.open ? App : null}
+            </Fragment>
+        );
     }
 }
 
+// API:
+//
 // {
 // "coord":{"lon":17.03,"lat":51.1},
 // "weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],
