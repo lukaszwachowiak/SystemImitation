@@ -3,7 +3,7 @@ import dataToLoad from "../data/dataToLoad";
 
 function Header(){
     return (
-        <header className="ld-bottomSpace ld-logo-container">
+        <header className="ld-bottomSpace ld-logo-container ld-header">
             <div className="ld-upSpace">
                 <div className="ld-logo-up-triangle">
                     <div className="ld-logo"></div>
@@ -62,7 +62,7 @@ export default class LoadingData extends Component {
         const loa = (
             <div className="ld-container">
                 <Header/>
-                <main>
+                <main className="ld-main">
                     <section>
                         <article>
                             <p className="ld-bottomSpace">{dataToLoad.murica}</p>

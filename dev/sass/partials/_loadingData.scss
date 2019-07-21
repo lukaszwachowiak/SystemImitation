@@ -31,7 +31,7 @@
     }
 
     .megatron {
-      color: $color-red;
+      color: $color-white;
       font-size: 3rem;
     }
 
@@ -40,7 +40,7 @@
     }
   }
 
-  main, header {
+  .ld-main, .ld-header {
     margin-left: 2rem;
   }
 
@@ -67,5 +67,6 @@
       margin-right: 2rem;
     }
   }
+
 }
 
