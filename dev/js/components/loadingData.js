@@ -3,13 +3,17 @@ import dataToLoad from "../data/dataToLoad";
 
 function Header(){
     return (
-        <header className="ld-bottomSpace">
-            <div>
-                <div></div>
-                <div></div>
-                <div></div>
+        <header className="ld-bottomSpace ld-logo-container">
+            <div className="ld-upSpace">
+                <div className="ld-logo-up-triangle">
+                    <div className="ld-logo"></div>
+                </div>
+                <div className="ld-logo-down-triangle">
+                    <div className="ld-logo"></div>
+                    <div className="ld-logo"></div>
+                </div>
             </div>
-            <h1 className="megatron">American <br/> Megatron</h1>
+            <h1 className="megatron ld-upSpace">American <br/> Megatron</h1>
         </header>
     )
 }

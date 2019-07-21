@@ -5,10 +5,39 @@
   color: $color-white;
   font-size: $font-size * 1.25;
   height: 100vh;
+  position: relative;
 
-  .megatron {
-    color: $color-red;
-    font-size: 3rem;
+  .ld-logo {
+    width: 0;
+    height: 0;
+    border-left: 2.5rem solid transparent;
+    border-right: 2.5rem solid transparent;
+    border-bottom: 2.5rem solid red;
+  }
+
+  .ld-logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .ld-logo-up-triangle {
+      display: flex;
+      justify-content: center;
+    }
+
+    .ld-logo-down-triangle {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .megatron {
+      color: $color-red;
+      font-size: 3rem;
+    }
+
+    .ld-upSpace {
+      margin-top: 1rem;
+    }
   }
 
   main, header {
@@ -28,9 +57,15 @@
    }
 
   .ld-footer {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 2rem;
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+
+    .ld-copyright {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 2rem;
+    }
   }
 }
 
