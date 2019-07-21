@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import LoadingData from "./components/loadingData.js";
 import LogIn from "./components/logIn.js";
 import Screen from "./components/screen";
+import FolderIcon from "./components/screenComponents/folder";
 
 // import System from "./components/system.js";
 
@@ -29,8 +30,8 @@ class App extends Component {
     render(){
         // return this.state.isValid ? <System/> : <LoadingData/> // do wywalenia
 
-        // return this.state.isValid ? <LogIn password="admin1"/> : <LoadingData/> // WERSJA OSTATECZNA
-        return <LoadingData/> // robocza ścieżka
+        return this.state.isValid ? <LogIn password="admin1"/> : <LoadingData/> // WERSJA OSTATECZNA
+        // return <FolderIcon/> // robocza ścieżka
     }
 }
 

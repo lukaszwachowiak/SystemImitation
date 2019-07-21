@@ -43,22 +43,28 @@ export default class LogIn extends Component {
 
     render(){
         const login = (
-            <div className="container">
-                <header>
-                    <div></div>
+            <div className="login-container">
+                <header className="login-center">
+                    <div className="login-photo"></div>
                     <h1>admin</h1>
                 </header>
-                <div>
+                <div className="login-form">
                     <form onSubmit={e => this.handleSubmit(e)}>
                         <input
                             type="password"
                             name="password"
                             value={this.state.correctPass}
                             onChange={e => this.handleChange(e)}
+                            className="login-password"
                         />
                         <br/>
-                        <input type="submit" value="Zaloguj się"/>
-                        {/*^ albo jako <button>Zaloguj się</button>, bo może być łatwiejszy do ostylowania*/}
+                        <input
+                            type="submit"
+                            value="Zaloguj się"
+                            className="login-submit"
+                        />
+                        {/*^ albo jako <button type="submit">Zaloguj się</button>, bo może być łatwiejszy do ostylowania*/}
+                        {/*<button type="submit">Zaloguj się</button>*/}
                     </form>
                     {this.state.error ? <p>Podane hasło jest nieprawidłowe</p> : null}
                 </div>

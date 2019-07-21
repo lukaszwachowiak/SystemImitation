@@ -40,20 +40,22 @@ export default class FolderIcon extends Component {
                     </ul>
                 </aside>
                 <main>
-                    {/*aplikacja pogodowa ???*/}
+                    {/*zawartość folderu ???*/}
                 </main>
                 <footer></footer>
             </div>
         );
 
-        const folderIcon = (<div onDoubleClick={e => this.open(e)}>
-            <div></div>
+        const folderIcon = (
+            <div
+                onDoubleClick={e => this.open(e)}
+                className="folderIcon-center"
+            >
+                <div className="folderIcon"></div>
             {/*https://www.google.pl/search?biw=1366&bih=572&tbm=isch&q=windows+98+folder&chips=q:windows+98+folder,online_chips:folder+icon&sa=X&ved=0ahUKEwjL14zmosPjAhWmxcQBHUKMDHcQ4lYIMSgG#imgrc=IpgbxY3Fn4sqEM:*/}
-            {/*div + dwa pseudoelementy*/}
-            {/*z pomocą :before i :after stworzyć dwa pseudoelementy*/}
-            {/*oraz z pomocą transform: skewX(25deg); zrobić z nich dwa romby powyżej powyższego diva*/}
-            <p>Pliki</p>
-        </div>);
+                <p>Pliki</p>
+            </div>
+        );
 
         return (
             <Fragment>

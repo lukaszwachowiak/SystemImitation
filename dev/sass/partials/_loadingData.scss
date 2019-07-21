@@ -4,6 +4,7 @@
   background-color: $color-black;
   color: $color-white;
   font-size: $font-size * 1.25;
+  font-family: monospace;
   height: 100vh;
   position: relative;
 
@@ -62,6 +63,7 @@
     width: 100%;
 
     .ld-copyright {
+      color: grey;
       display: flex;
       justify-content: flex-end;
       margin-right: 2rem;
