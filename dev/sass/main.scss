@@ -1,3 +1,7 @@
-.ld-footer {
-  border: 1px solid black;
-}
+@import "./partials/_reset.scss";
+
+@import "./modules/_all.scss";
+@import "./modules/_variables.scss";
+
+@import "./partials/_loadingData.scss";
+

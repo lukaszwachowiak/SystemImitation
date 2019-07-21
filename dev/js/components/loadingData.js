@@ -3,13 +3,13 @@ import dataToLoad from "../data/dataToLoad";
 
 function Header(){
     return (
-        <header>
+        <header className="ld-bottomSpace">
             <div>
                 <div></div>
                 <div></div>
                 <div></div>
             </div>
-            <h1>Megatron</h1>
+            <h1 className="megatron">American <br/> Megatron</h1>
         </header>
     )
 }
@@ -56,30 +56,30 @@ export default class LoadingData extends Component {
 
     render(){
         const loa = (
-            <div className="container">
+            <div className="ld-container">
                 <Header/>
                 <main>
                     <section>
                         <article>
-                            <p>{dataToLoad.murica}</p>
-                            <p>{dataToLoad.lapsus}</p>
-                            <p>{dataToLoad.cocaine}</p>
+                            <p className="ld-bottomSpace">{dataToLoad.murica}</p>
+                            <p>{dataToLoad.lapsus} <br/> {dataToLoad.cpu}</p>
+                            <p className="ld-p-indent ld-bottomSpace">{dataToLoad.cocaine}</p>
                             <p>{dataToLoad.fsharp}</p>
                             <p>{dataToLoad.aminor}</p>
-                            <p>{dataToLoad.memoryRemains}</p>
-                            <p>{dataToLoad.SB}</p>
+                            <p className="ld-bottomSpace">{dataToLoad.memoryRemains}</p>
+                            <p className="ld-bottomSpace">{dataToLoad.SB}</p>
                             <p>{dataToLoad.sata1} </p>
-                            <p>{dataToLoad.sata2}
+                            <p className="ld-bottomSpace">{dataToLoad.sata2}
                             {this.state.sataSpan ? <span>{dataToLoad.sata2span}</span> : null}
                             </p>
-                            <p>{this.state.inspector ? dataToLoad.gadget : null}</p>
+                            <p >{this.state.inspector ? dataToLoad.gadget : null}</p>
                             <>{this.state.unholy ? <><p>{dataToLoad.satan}</p> <p>{dataToLoad.lucek}</p></> : null}</>
                         </article>
-                        <div>{this.state.cursor}</div>
+                        <div className="ld-cursor">{this.state.cursor}</div>
                     </section>
                 </main>
-                <footer>
-                    <div className="ld-footer">&copy; Copyright by Łukasz Wachowiak</div>
+                <footer className="ld-footer">
+                    <div className="ld-copyright">&copy; Copyright by Łukasz Wachowiak</div>
                 </footer>
             </div>
         );

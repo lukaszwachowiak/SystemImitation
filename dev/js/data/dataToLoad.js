@@ -1,6 +1,7 @@
 export default {
     murica: "AMIBIOS(C)1987 'Murican GigaMegatrends, Inc., Born in the USA",
     lapsus: "ASUS C-3PO LX R2D2 (Beep-Beep) ACPI BIOS Revision 0208",
+    cpu: "Intel(R) Penthouse(R) CPU 2710 @2.60GHz",
     cocaine: "Need for Speed: A = 432Hz",
     fsharp: "Press F2 to run SETUP",
     aminor: "Press F11 to clap your HANDS",

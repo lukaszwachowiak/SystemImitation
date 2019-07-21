@@ -1,0 +1,36 @@
+@import "../modules/_variables.scss";
+
+.ld-container {
+  background-color: $color-black;
+  color: $color-white;
+  font-size: $font-size * 1.25;
+  height: 100vh;
+
+  .megatron {
+    color: $color-red;
+    font-size: 3rem;
+  }
+
+  main, header {
+    margin-left: 2rem;
+  }
+
+  .ld-bottomSpace {
+    margin-bottom: 1.5rem;
+  }
+
+  .ld-p-indent {
+    text-indent: 2rem;
+  }
+
+  .ld-cursor {
+     height: 1rem;
+   }
+
+  .ld-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2rem;
+  }
+}
+
