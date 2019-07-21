@@ -78,7 +78,9 @@ export default class LoadingData extends Component {
                         <div>{this.state.cursor}</div>
                     </section>
                 </main>
-                <footer>&copy; Copyright by Łukasz Wachowiak</footer>
+                <footer>
+                    <div className="ld-footer">&copy; Copyright by Łukasz Wachowiak</div>
+                </footer>
             </div>
         );
 
