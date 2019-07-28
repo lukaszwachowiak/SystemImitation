@@ -18,9 +18,15 @@ export default class Footer extends Component {
 
     render(){
         return (
-            <footer>
-                <ul>Start</ul>
-                <div>
+            <footer className="screenFooter">
+                <ul className="footerStart">Start</ul>
+                <div className="footerLine"></div>
+                <div className="footerIcons">
+                    {/*<i className="fab fa-internet-explorer"></i>*/}
+                </div>
+                <div className="footerLine"></div>
+                <div className="footerSpace"></div>
+                <div className="footerWatch">
                     <p>{this.state.date.toLocaleTimeString()}</p>
                     <p>{this.state.date.toLocaleDateString()}</p>
                 </div>

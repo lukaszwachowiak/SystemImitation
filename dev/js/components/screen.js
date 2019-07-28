@@ -16,7 +16,7 @@ export default class Screen extends Component {
 
     render(){
         return (
-            <div className="container">
+            <div className="screenContainer">
                 <FolderIcon/>
                 <WeatherApp/>
                 {/*<Winamp/>>*/}

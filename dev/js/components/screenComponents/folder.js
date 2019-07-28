@@ -31,11 +31,11 @@ export default class FolderIcon extends Component {
         const folder = (
             <div>
                 <header>
-                    <div onClick={e => this.close(e)}>+</div>
-                    {/*^ wyłączanie folderu, krzyżyk, obrócić go z pomocą transform: rotate(45deg)*/}
+                    <div className="closeCross" onClick={e => this.close(e)}>+</div>
                 </header>
                 <aside>
                     <ul>
+                        {/*{FolderList.map()}*/}
                         {/*wczytywanie elementów li z folderList z pomocą .map*/}
                     </ul>
                 </aside>
@@ -49,11 +49,10 @@ export default class FolderIcon extends Component {
         const folderIcon = (
             <div
                 onDoubleClick={e => this.open(e)}
-                className="folderIcon-center"
+                className="folderIconPosition"
             >
                 <div className="folderIcon"></div>
-            {/*https://www.google.pl/search?biw=1366&bih=572&tbm=isch&q=windows+98+folder&chips=q:windows+98+folder,online_chips:folder+icon&sa=X&ved=0ahUKEwjL14zmosPjAhWmxcQBHUKMDHcQ4lYIMSgG#imgrc=IpgbxY3Fn4sqEM:*/}
-                <p>Pliki</p>
+                <p className="folderIconText">Pliki</p>
             </div>
         );
 

@@ -31,7 +31,7 @@ class App extends Component {
         // return this.state.isValid ? <System/> : <LoadingData/> // do wywalenia
 
         return this.state.isValid ? <LogIn password="admin1"/> : <LoadingData/> // WERSJA OSTATECZNA
-        // return <FolderIcon/> // robocza ścieżka
+        // return <Screen/> // robocza ścieżka
     }
 }
 
