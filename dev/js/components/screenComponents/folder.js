@@ -61,7 +61,16 @@ export default class FolderIcon extends Component {
                             {FolderList.map(element =>
                                     <ul key={element.id}>
                                         {element.disk}
-                                        <li></li>
+                                        <li>{element.diskcontents.one}</li>
+                                        <li>{element.diskcontents.two}</li>
+                                        <li>{element.diskcontents.three}</li>
+                                        <li>{element.diskcontents.four}</li>
+                                        <li>{element.diskcontents.five}</li>
+                                        <li>{element.diskcontents.six}</li>
+                                        <li>{element.diskcontents.seven}</li>
+                                        <li>{element.diskcontents.eight}</li>
+                                        <li>{element.diskcontents.nine}</li>
+                                        <li>{element.diskcontents.ten}</li>
                                     </ul>
                             )}
                         </div>

@@ -166,6 +166,20 @@
     border-bottom: 2px solid darkgrey;
     border-right: 2px solid darkgrey;
     background-color: white;
+
+    div {
+      margin-top: 0.25rem;
+      font-weight: bolder;
+      text-indent: 0.25rem;
+      ul {
+        font-weight: bold;
+        margin-left: 1.5rem;
+        li {
+          font-weight: normal;
+          margin-left: 1.5rem;
+        }
+      }
+    }
   }
 
   .folderMainContent {
