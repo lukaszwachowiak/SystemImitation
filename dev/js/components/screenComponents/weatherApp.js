@@ -44,9 +44,14 @@ export default class WeatherApp extends Component {
 
     render(){
         const weatherAppIcon = (
-            <div onDoubleClick={e => this.open(e)}>
-                <div></div>
-                <p>Pogoda</p>
+            <div
+                onDoubleClick={e => this.open(e)}
+                className="weatherAppPosition"
+            >
+                <div className="weatherAppIcon">
+                    <i className="fas fa-sun weatherAppIconSun"></i>
+                </div>
+                <p className="weatherAppIconText">Pogoda</p>
             </div>
         );
 
@@ -58,7 +63,6 @@ export default class WeatherApp extends Component {
                     </div>
                     <footer>
                     <div onClick={e => this.close(e)}>Zakończ</div>
-                    {/*^ wyłączanie folderu, krzyżyk, obrócić go z pomocą transform: rotate(45deg)*/}
                     </footer>
                 </div>) : null
         );

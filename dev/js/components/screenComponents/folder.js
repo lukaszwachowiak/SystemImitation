@@ -29,20 +29,51 @@ export default class FolderIcon extends Component {
 
     render(){
         const folder = (
-            <div>
-                <header>
-                    <div className="closeCross" onClick={e => this.close(e)}>+</div>
+            <div className="folderPosition">
+                <header className="folderHeader">
+                    <h1 className="folderHeaderDisk">(C:)</h1>
+                    <div className="folderHeaderSpace"></div>
+                    <div className="closeCross" onClick={e => this.close(e)}>X</div>
                 </header>
-                <aside>
-                    <ul>
-                        {/*{FolderList.map()}*/}
-                        {/*wczytywanie elementów li z folderList z pomocą .map*/}
-                    </ul>
-                </aside>
-                <main>
-                    {/*zawartość folderu ???*/}
-                </main>
-                <footer></footer>
+                <nav className="folderNavigationContainer">
+                    <div className="folderNavigation">
+                        <ul className="folderNavigationList">
+                            <li>File</li>
+                            <li>Edit</li>
+                            <li>View</li>
+                            <li>Tools</li>
+                            <li>Help</li>
+                        </ul>
+                    </div>
+                    <div className="folderNavigationIcons">
+                        <div>
+                            {/*div z ikonami*/}
+                        </div>
+                        <div>
+                            {/*div z tekstem w paragrafach*/}
+                        </div>
+                    </div>
+                </nav>
+                <div className="folderContentContainer">
+                    <aside className="folderSideContent">
+                        <div>
+                            My Computer
+                            {FolderList.map(element =>
+                                    <ul key={element.id}>
+                                        {element.disk}
+                                        <li></li>
+                                    </ul>
+                            )}
+                        </div>
+                    </aside>
+                    <main className="folderMainContent">
+                        {/*zawartość folderu ???*/}
+                    </main>
+                </div>
+                <footer className="folderFooterContainer">
+                    <div></div>
+                    <div></div>
+                </footer>
             </div>
         );
 

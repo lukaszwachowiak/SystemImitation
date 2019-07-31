@@ -13,13 +13,33 @@
     border-left: 4px solid white;
     box-shadow: 2px 2px 0 0 grey;
     margin: 0.25rem auto;
+
+    &:hover {
+      cursor: ew-resize;
+    }
   }
 
   .footerIcons {
     border: 1px solid grey;
     flex-grow: 2;
     margin: 0.25rem 0.25rem 0.25rem 0.25rem;
-    font-size: 4rem;
+    font-size: 1.75rem;
+
+    i {
+      margin: 0.25rem 0.5rem 0.25rem 0.5rem;
+    }
+
+    .internetExplorerIcon {
+      color: darkturquoise;
+    }
+
+    //.folderSmallIconClosed {
+    //  color: black;
+    //}
+    //
+    //.sunIcon {
+    //  color: black;
+    //}
   }
 
   .footerSpace {
@@ -41,19 +61,29 @@
     display: flex;
     //flex-grow: 1;
     width: 5%;
+
+    &:hover {
+      cursor: default;
+    }
   }
 
-  .footerWatch {
+  .footerWatchContainer {
     align-items: center;
     border-top: 2px solid grey;
     border-left: 2px solid grey;
     border-bottom: 2px solid white;
     border-right: 2px solid white;
     font-weight: bold;
-    justify-content: center;
+    justify-content: space-around;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-grow: 1;
     margin: 0.25rem 0.25rem 0.25rem 0.25rem;
+
+    .footerWatch {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
   }
 }

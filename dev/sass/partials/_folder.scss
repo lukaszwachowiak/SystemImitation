@@ -55,15 +55,148 @@
   width: 5rem;
   height: 2rem;
   font-size: 1.25rem;
+
+  //&:hover {
+  //  cursor: default;
+  //}
 }
 
 // FOLDER:
 
-.closeCross {
-  background-color: white;
-  color: black;
-  height: 10px;
-  width: 10px;
-  transform: rotate(45deg);
-  font-size: 2rem;
+.folderPosition {
+  border: 0.5rem solid lightgrey;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 0 black;
+  height: 30rem;
+  width: 40rem;
+  position: absolute;
+  left: 12rem;
+  top: 10rem;
+}
+
+.folderHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: darkblue;
+  box-sizing: border-box;
+  height: 1.5rem;
+  width: 100%;
+
+  .folderHeaderDisk {
+    color: white;
+    margin-left: 0.25rem;
+    flex-grow: 1;
+  }
+
+  .folderHeaderSpace {
+    flex-grow: 2;
+  }
+
+  .closeCross {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.25rem;
+    background-color: lightgrey;
+    border: 1px solid black;
+    box-sizing: border-box;
+    color: black;
+    font-weight: bold;
+    height: 1rem;
+    width: 1rem;
+    font-size: 1rem;
+
+    &:hover {
+      cursor: default;
+    }
+  }
+}
+
+.folderNavigationContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.folderNavigation {
+  background-color: lightgrey;
+  box-sizing: border-box;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-bottom: 2px solid darkslategray;
+  border-right: 2px solid darkslategrey;
+  display: flex;
+  align-items: center;
+  height: 2rem;
+
+  .folderNavigationList {
+    display: flex;
+    flex-direction: row;
+    margin-left: 0.25rem;
+
+    li {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.folderNavigationIcons {
+  background-color: lightgrey;
+  box-sizing: border-box;
+  height: 5rem;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-bottom: 2px solid darkslategray;
+  border-right: 2px solid darkslategrey;
+  display: flex;
+  flex-direction: column;
+}
+
+.folderContentContainer {
+  display: flex;
+  flex-direction: row;
+  height: 19rem;
+  box-sizing: border-box;
+
+  .folderSideContent {
+    box-sizing: border-box;
+    width: 30%;
+    border-top: 2px solid darkgrey;
+    border-left: 2px solid darkgrey;
+    border-bottom: 2px solid darkgrey;
+    border-right: 2px solid darkgrey;
+    background-color: white;
+  }
+
+  .folderMainContent {
+    box-sizing: border-box;
+    width: 70%;
+    border-left: 10px solid lightgrey;
+    border-right: 2px solid darkslategrey;
+    background-color: white;
+  }
+}
+
+.folderFooterContainer {
+  background-color: lightgrey;
+  box-sizing: border-box;
+  height: 1.5rem;
+  border-top: 2px solid darkslategray;
+  display: flex;
+  flex-direction: row;
+
+  div {
+    border-top: 2px solid grey;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+
+    &:nth-child(1){
+      width: 34%;
+    }
+
+    &:nth-child(2){
+       width: 66%;
+     }
+  }
 }

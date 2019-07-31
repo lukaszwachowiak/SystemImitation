@@ -1,0 +1,33 @@
+.weatherAppPosition {
+  position: absolute;
+  top: 7.5rem;
+  left: 1rem;
+}
+
+.weatherAppIcon {
+  align-items: center;
+  background-color: turquoise;
+  border: 2px solid white;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  font-size: 4rem;
+  height: 6rem;
+  justify-content: center;
+  width: 5rem;
+
+  .weatherAppIconSun {
+    color: yellow;
+
+  }
+}
+
+.weatherAppIconText {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 2rem;
+  font-size: 1.25rem;
+}
