@@ -14,11 +14,13 @@ export default class WeatherApp extends Component {
         fetch(
             // opcja z wyszukiwarką miasta:
             // `https://api.openweathermap.org/data/2.5/weather?q=${this.state.cityName}&APPID=63331c4f9b8a91f9f17ac1580ef2b545`
-            `https://api.openweathermap.org/data/2.5/weather?q=Wroclaw&APPID=63331c4f9b8a91f9f17ac1580ef2b545`
+            // `https://api.openweathermap.org/data/2.5/weather?q=Wroclaw&APPID=63331c4f9b8a91f9f17ac1580ef2b545`
+            // opcja ze zmianą na system metryczny (Celsjusz) + zmiana języka na polski
+                `https://api.openweathermap.org/data/2.5/weather?q=Wroclaw&units=metric&lang=pl&APPID=63331c4f9b8a91f9f17ac1580ef2b545`
         )
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 this.setState({weather: data})
                 }
             )
@@ -46,7 +48,7 @@ export default class WeatherApp extends Component {
         const weatherAppIcon = (
             <div
                 onDoubleClick={e => this.open(e)}
-                className="weatherAppPosition"
+                className="weatherAppIconPosition"
             >
                 <div className="weatherAppIcon">
                     <i className="fas fa-sun weatherAppIconSun"></i>
@@ -57,12 +59,41 @@ export default class WeatherApp extends Component {
 
         const App = (
             this.state.weather ? (
-                <div>
-                    <div>Tutaj będą informacje o bieżącej pogodzie:
-                        {this.state.weather.clouds.all}
+                <div className="weatherAppPosition">
+                    <div className="weatherAppInformation">
+                        <header className="weatherAppLocation">
+                            <h1>Wrocław, PL</h1>
+                            {/*ikonki z API:*/}
+                            {/*{this.state.weather.weather[0].icon}*/}
+                            {/*https://openweathermap.org/weather-conditions*/}
+                            {/*http://openweathermap.org/img/wn/01n@2x.png*/}
+                        </header>
+                        <article className="weatherAppMain">
+                            <section>{Math.floor(this.state.weather.main.temp)}&deg;C</section>
+                            <section>{this.state.weather.weather[0].description}</section>
+                        </article>
+                        <article className="weatherAppSecondary">
+                            <section>
+                                <p>Ciśnienie:</p>
+                                <div>{this.state.weather.main.pressure}hPa</div>
+                            </section>
+                            <section>
+                                <p>Wiatr:</p>
+                                <div>{this.state.weather.wind.speed}km&#47;h</div>
+                            </section>
+                            <section>
+                                <p>Zachmurzenie:</p>
+                                <div>{this.state.weather.clouds.all}&#37;</div>
+                            </section>
+                        </article>
                     </div>
-                    <footer>
-                    <div onClick={e => this.close(e)}>Zakończ</div>
+                    <footer className="weatherAppCloseBtnContainer">
+                        <div
+                            onClick={e => this.close(e)}
+                            className="weatherAppCloseBtn"
+                        >
+                            Zakończ
+                        </div>
                     </footer>
                 </div>) : null
         );
@@ -80,7 +111,7 @@ export default class WeatherApp extends Component {
 //
 // {
 // "coord":{"lon":17.03,"lat":51.1},
-// "weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],
+// "weather":[{"id":800, "main":"Clear", "description":"clear sky", "icon":"01d"}],
 // "base":"stations",
 // "main":{"temp":300.13,"pressure":1015,"humidity":42,"temp_min":297.59,"temp_max":302.59},
 // "visibility":10000,

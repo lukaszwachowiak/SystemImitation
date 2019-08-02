@@ -48,6 +48,7 @@ export default class FolderIcon extends Component {
                     <div className="folderNavigationIcons">
                         <div>
                             {/*div z ikonami*/}
+                            {/*https://www.ostraining.com/blog/coding/creating-icons-with-css/*/}
                         </div>
                         <div>
                             {/*div z tekstem w paragrafach*/}

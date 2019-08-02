@@ -1,4 +1,8 @@
-.weatherAppPosition {
+$light-blue: #298FCC;
+
+// IKONKA APLIKACJI
+
+.weatherAppIconPosition {
   position: absolute;
   top: 7.5rem;
   left: 1rem;
@@ -18,7 +22,6 @@
 
   .weatherAppIconSun {
     color: yellow;
-
   }
 }
 
@@ -31,3 +34,70 @@
   height: 2rem;
   font-size: 1.25rem;
 }
+
+// APLIKACJA:
+
+.weatherAppPosition {
+  background-color: black;
+  border: 0.5rem solid white;
+  box-sizing: border-box;
+  color: white;
+  height: 40rem;
+  width: 30rem;
+  position: absolute;
+  left: 55rem;
+  top: 2rem;
+}
+
+.weatherAppInformation {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 80%;
+  width: 100%;
+
+  .weatherAppLocation {
+    background-color: lighten($light-blue, 10%);
+    height: 50%;
+    width: 50%;
+  }
+
+  .weatherAppMain {
+    background-color: lighten($light-blue, 10%);
+    height: 50%;
+    width: 50%;
+  }
+
+  .weatherAppSecondary {
+    background-color: lighten($light-blue, 10%);
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+    width: 100%;
+
+    & section {
+      width: 33%;
+    }
+  }
+}
+
+.weatherAppCloseBtnContainer {
+  background-color: #0078D7;
+  height: 20%;
+  width: 100%;
+
+  .weatherAppCloseBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bolder;
+    height: 100%;
+    width: 100%;
+
+    &:hover {
+      cursor: default;
+    }
+  }
+}
+
