@@ -44,8 +44,15 @@ export default class LogIn extends Component {
     render(){
         const login = (
             <div className="login-container">
+                <div className="loginLogo">
+                    <div className="loginLogoUpper">
+                        <p>Microsoft</p>
+                        <i className="fab fa-windows"></i>
+                    </div>
+                    <p>Windows 87</p>
+                </div>
                 <header className="login-center">
-                    <div className="login-photo"></div>
+                    <i className="far fa-user"></i>
                     <h1>admin</h1>
                 </header>
                 <div className="login-form">
@@ -56,6 +63,7 @@ export default class LogIn extends Component {
                             value={this.state.correctPass}
                             onChange={e => this.handleChange(e)}
                             className="login-password"
+
                         />
                         <br/>
                         <input
@@ -63,10 +71,8 @@ export default class LogIn extends Component {
                             value="Zaloguj się"
                             className="login-submit"
                         />
-                        {/*^ albo jako <button type="submit">Zaloguj się</button>, bo może być łatwiejszy do ostylowania*/}
-                        {/*<button type="submit">Zaloguj się</button>*/}
                     </form>
-                    {this.state.error ? <p>Podane hasło jest nieprawidłowe</p> : null}
+                    {this.state.error ? <p className="loginError">Podane hasło jest nieprawidłowe</p> : null}
                 </div>
             </div>
         );
