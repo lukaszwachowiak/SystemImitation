@@ -47,11 +47,19 @@ export default class FolderIcon extends Component {
                     </div>
                     <div className="folderNavigationIcons">
                         <div>
-                            {/*div z ikonami*/}
+                            <i className="fas fa-arrow-left"></i>
+                            <i className="fas fa-arrow-right"></i>
+                            <i className="fas fa-cut"></i>
+                            <i className="far fa-copy"></i>
+                            <i className="fas fa-paste"></i>
                             {/*https://www.ostraining.com/blog/coding/creating-icons-with-css/*/}
                         </div>
                         <div>
-                            {/*div z tekstem w paragrafach*/}
+                            <p>Back</p>
+                            <p>Forward</p>
+                            <p>Cut</p>
+                            <p>Copy</p>
+                            <p>Paste</p>
                         </div>
                     </div>
                 </nav>
@@ -81,8 +89,8 @@ export default class FolderIcon extends Component {
                     </main>
                 </div>
                 <footer className="folderFooterContainer">
-                    <div></div>
-                    <div></div>
+                    <div>0 Object(s)</div>
+                    <div>My Computer</div>
                 </footer>
             </div>
         );

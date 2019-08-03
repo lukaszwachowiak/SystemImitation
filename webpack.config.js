@@ -1,5 +1,5 @@
 const path = require("path");
-const entryPath = "dev/";
+const entryPath = "dev";
 const entryFile = "app.js";
 
 module.exports = {

@@ -64,26 +64,26 @@ export default class WeatherApp extends Component {
                         <header className="weatherAppLocation">
                             <h1>Wrocław, PL</h1>
                             {/*ikonki z API:*/}
-                            {/*{this.state.weather.weather[0].icon}*/}
-                            {/*https://openweathermap.org/weather-conditions*/}
-                            {/*http://openweathermap.org/img/wn/01n@2x.png*/}
+                            {/*{this.state.weather.weather[0].icon} <-w ten sposób można uzyskać tylko string z nazwą ikonki*/}
+                            {/*https://openweathermap.org/weather-conditions <- wszystkie ikonki*/}
+                            {/*http://openweathermap.org/img/wn/01n@2x.png <- adres ikonki*/}
                         </header>
                         <article className="weatherAppMain">
                             <section>{Math.floor(this.state.weather.main.temp)}&deg;C</section>
                             <section>{this.state.weather.weather[0].description}</section>
                         </article>
                         <article className="weatherAppSecondary">
-                            <section>
-                                <p>Ciśnienie:</p>
+                            <section className="weatherPressure">
                                 <div>{this.state.weather.main.pressure}hPa</div>
+                                <p>Ciśnienie</p>
                             </section>
-                            <section>
-                                <p>Wiatr:</p>
+                            <section className="weatherWind">
                                 <div>{this.state.weather.wind.speed}km&#47;h</div>
+                                <p>Wiatr</p>
                             </section>
-                            <section>
-                                <p>Zachmurzenie:</p>
+                            <section className="weatherClouds">
                                 <div>{this.state.weather.clouds.all}&#37;</div>
+                                <p>Zachmurzenie</p>
                             </section>
                         </article>
                     </div>
