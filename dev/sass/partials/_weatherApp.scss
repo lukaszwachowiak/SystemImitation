@@ -38,7 +38,6 @@ $light-blue: #298FCC;
 // APLIKACJA:
 
 .weatherAppPosition {
-  background-color: black;
   border: 0.5rem solid white;
   box-sizing: border-box;
   color: white;
@@ -53,48 +52,108 @@ $light-blue: #298FCC;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  box-sizing: border-box;
+  border: 0.5rem solid black;
+  font-family: Arial, sans-serif;
   height: 80%;
   width: 100%;
 
   .weatherAppLocation {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-bottom: 0.5rem solid black;
+    border-right: 0.5rem solid black;
+    box-sizing: border-box;
     background-color: lighten($light-blue, 10%);
+    font-size: 2rem;
+    text-indent: 1rem;
+    padding-bottom: 1rem;
     height: 50%;
     width: 50%;
   }
 
   .weatherAppMain {
-    background-color: lighten($light-blue, 10%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0BB6E6;
+    border-bottom: 0.5rem solid black;
+    box-sizing: border-box;
     height: 50%;
     width: 50%;
+
+    section:first-child {
+      font-size: 5rem;
+      font-weight: bolder;
+      margin-bottom: 2rem;
+    }
   }
 
   .weatherAppSecondary {
     background-color: lighten($light-blue, 10%);
     display: flex;
     flex-direction: row;
+    font-size: 2rem;
     height: 50%;
     width: 100%;
 
     & section {
       width: 33%;
+
+      & p:last-child {
+        font-size: 1rem;
+      }
     }
 
     .weatherPressure {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      box-sizing: border-box;
+      border-right: 0.5rem solid black;
 
+      p:last-child {
+        padding-top: 2rem;
+      }
     }
 
     .weatherWind {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      border-right: 0.5rem solid black;
+      width: 34%;
 
+      p:last-child {
+        padding-top: 2rem;
+      }
     }
 
     .weatherClouds {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
+      p:last-child {
+        padding-top: 2rem;
+      }
     }
   }
 }
 
 .weatherAppCloseBtnContainer {
   background-color: #0078D7;
+  box-sizing: border-box;
+  border-bottom: 0.5rem solid black;
+  border-left: 0.5rem solid black;
+  border-right: 0.5rem solid black;
   height: 20%;
   width: 100%;
 
