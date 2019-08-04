@@ -12,4 +12,5 @@ Aplikacja składa się z:
 - komponent ikona aplikacji pogodowej (event na dwuklik, renderowanie komponentu aplikacja);
 - komponent aplikacja (pobieranie aktualnych danych pogodowych z API - openweathermap.org - dla Wrocławia, w systemie metrycznym, w języku polskim, event/przycisk wyłączania aplikacji);
 - komponent pasek zadań (pobieranie aktualnej daty i godziny).
+
 Stylowanie w SASSie.
