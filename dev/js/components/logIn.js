@@ -46,7 +46,7 @@ export default class LogIn extends Component {
             <div className="login-container">
                 <div className="loginLogo">
                     <div className="loginLogoUpper">
-                        <p>Microsoft</p>
+                        <p>Macrohard</p>
                         <i className="fab fa-windows"></i>
                     </div>
                     <p>Windows 87</p>
