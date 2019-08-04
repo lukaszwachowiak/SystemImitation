@@ -78,7 +78,7 @@ $light-blue: #298FCC;
     transition-timing-function: ease;
     transition-delay: 0.5s;
     &:hover {
-      background-color: darken($light-blue, 20%);
+      background-color: darken($light-blue, 25%);
     }
   }
 
