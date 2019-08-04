@@ -63,7 +63,6 @@ export default class LogIn extends Component {
                             value={this.state.correctPass}
                             onChange={e => this.handleChange(e)}
                             className="login-password"
-
                         />
                         <br/>
                         <input

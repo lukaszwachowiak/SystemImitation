@@ -36,6 +36,7 @@
     }
 
     p:last-child {
+      font-weight: 700;
       text-indent: 3rem;
     }
   }
@@ -64,7 +65,7 @@
 
       &:focus {
         //width: 20rem;
-        
+
       }
     }
 
